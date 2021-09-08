@@ -1,0 +1,16 @@
+name: Test
+
+on: push
+
+jobs:
+    test:
+        name: Test
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Cache node modules
+              uses: actions/cache@v2
+              env:
+                  cache-name: v1-cache-test
+              with:
+                  path: ./README.md
+                  key: ${{ env.cache-name }}-${{ hashFiles('README.md') }}
