@@ -13,4 +13,4 @@ jobs:
                   cache-name: v1-cache-test
               with:
                   path: README.md
-                  key: ${{ env.cache-name }}-33
+                  key: ${{ env.cache-name }}-${{ hashFiles('README.md') }}
