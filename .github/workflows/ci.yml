@@ -7,10 +7,16 @@ jobs:
         name: Test
         runs-on: ubuntu-20.04
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
             - name: Cache node modules
               uses: actions/cache@v2
               env:
                   cache-name: v1-cache-test
               with:
-                  path: ./README.md
+                  path: README.md
                   key: ${{ env.cache-name }}-${{ hashFiles('README.md') }}
+
+            - name: Wait
+              run: sleep 60
