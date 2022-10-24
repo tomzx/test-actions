@@ -17,3 +17,6 @@ jobs:
               with:
                   path: README.md
                   key: ${{ env.cache-name }}-${{ hashFiles('README.md') }}
+
+            - name: Wait
+              run: sleep 60
