@@ -1,12 +1,13 @@
-name: Auto-update
+name: Auto-update PRs
+
 on:
   push:
     branches:
       - master
 
 jobs:
-  Auto:
-    name: Auto-update
+  update:
+    name: Auto-update PRs
     runs-on: ubuntu-latest
     steps:
       - uses: tibdex/auto-update@v2
