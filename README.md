@@ -1,3 +1,3 @@
 Hello world!
 
-Dummy update 1 2
+Dummy update 1 2 3
