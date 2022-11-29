@@ -1,0 +1,14 @@
+name: Test
+
+on: workflow_dispatch
+
+jobs:
+    test:
+        name: Test
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: SHA?
+              run: echo ${GITHUB_SHA:0:10}
